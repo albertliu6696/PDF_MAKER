@@ -1,13 +1,13 @@
 from picamera import PiCamera
-from  time
-import sleep
+from time import sleep
 
 #{{{ Start and Cleanup Functions
-def start(camera,resolution):
+def start(camera,res):
     camera.start_preview()
-    camera.resolution(resolution[0],resolution[1])
+    camera.resolution = (res[0],res[1])
 def finish(camera):
     camera.stop_preview()
+    camera.close()
 #}}}
 
 def __init__():
